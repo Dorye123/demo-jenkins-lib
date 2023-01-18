@@ -1,5 +1,5 @@
-def build(String imageName) {
-    sh "docker build -t ${imageName} . "
+def build(String imageName, String dockerFilePath ) {
+    sh "docker build -t ${imageName} -f ${dockerFilePath} . "
 }
 
 def push(String imageName) {
